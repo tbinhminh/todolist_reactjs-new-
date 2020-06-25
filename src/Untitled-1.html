@@ -1,0 +1,107 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<div className="container">
+    <div className="text-center">
+      <h1>Quản Lý Công Việc</h1>
+      <hr />
+    </div>
+    <div className="row">
+      <div className="col-md-4">
+        <div className="card text-left">
+          <div className="card-body">
+            <h4 className="card-title">Thêm Công Việc</h4>
+            <p className="card-text">
+            </p><form>
+              <div className="form-group">
+                <label htmlFor>Tên: </label>
+                <input type="text" name className="form-control" />
+              </div>
+              <label htmlFor>Trang thai: </label>
+              <select className="form-control" name id>
+                <option value={1}>Kích Hoạt</option>
+                <option value={0}>Ẩn</option>
+              </select>
+              <br />
+              <div className="text-center">
+                <button type="button" className="btn btn-primary">Them</button>
+                <button type="button" className="btn btn-danger">huybo</button>
+              </div>
+            </form>
+            <p />
+          </div>
+        </div>
+      </div>
+      <div className="col-md-6">
+        <button type="button" className="btn btn-primary">Them cong viec</button>
+        <div className="row mt-3">
+          <div className="col-md-6">
+            <div className="input-group mb-3">
+              <input type="text" className="form-control mr-2" placeholder="Nhập từ khóa..." />
+              <button type="button" className="btn btn-primary">Tim kiem</button>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="dropdown">
+              <button className="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sap xep
+              </button>
+              <div className="dropdown-menu" aria-labelledby="triggerId">
+                <a className="dropdown-item" href="#">Ten A -&gt; Z</a>
+                <a className="dropdown-item " href="#">Ten Z -&gt; A</a>
+                <a className="dropdown-item" href="#">Trạng Thái Kích Hoạt</a>
+                <a className="dropdown-item" href="#">Trạng Thái Ẩn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-4">
+          <div className="col-md-12">
+            <table className="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th className="text-center">STT</th>
+                  <th className="text-center">Tên</th>
+                  <th className="text-center">Trạng Thái</th>
+                  <th className="text-center">Hành Động</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td />
+                  <td>
+                    <input type="text" className="form-control" />
+                  </td>
+                  <td>
+                    <select className="form-control">
+                      <option value={-1}>Tất Cả</option>
+                      <option value={0}>Ẩn</option>
+                      <option value={1}>Kích Hoạt</option>
+                    </select>
+                  </td>
+                  <td />
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Học lập trình</td>
+                  <td className="text-center">
+                    <span className="label label-success">
+                      Kích Hoạt
+                    </span>
+                  </td>
+                  <td className="text-center d-flex">
+                    <button type="button" className="btn btn-warning mr-3">
+                      Sửa
+                    </button>
+                    <button type="button" className="btn btn-danger">
+                      Xóa
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
