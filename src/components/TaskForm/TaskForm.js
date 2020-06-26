@@ -31,30 +31,15 @@ class TaskForm extends Component {
   }
     render(){
         return (
-            <div className="card text-left">
-            <div className="card-body">
-              <h4 className="card-title">Thêm Công Việc</h4> 
-              <p className="card-text">
-              </p><form onSubmit={this.handleSubmit}>
-                <div className="form-group">
-                  <label>Tên: </label>
-                  <input type="text"  className="form-control" name="name" value={this.state.name} onChange={this.handleChange} />
-                </div>
-                <label>Trang thai: </label>
-                <select className="form-control" name="status" value={this.state.status} onChange={this.handleChange}>
-                  <option value={true}>Kích Hoạt</option>
-                  <option value={false}>Ẩn</option>
-                </select>
-                <br />
-                <div className="text-center">
-                  <button type="submit" className="btn btn-primary mr-2">Thêm</button>
-                  <button type="submit" className="btn btn-danger mr-2" onClick={this.onClear}>Làm mới </button>
-                  <button type="submit" className="btn btn-danger" onClick={this.onExitForm}>Đóng </button>
+          <div className="col-md-6">
+              <form onSubmit={this.handleSubmit}>
+                <div className="input-group mb-3">
+                <input type="text"  className="form-control" name="name" value={this.state.name}
+                 onChange={this.handleChange} placeholder="nhập tên công việc"/>
+                  <button type="submit" className="btn btn-primary">Thêm</button>
                 </div>
               </form>
-              <p />
             </div>
-          </div>
         );
     }
 }

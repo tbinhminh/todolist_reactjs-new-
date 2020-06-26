@@ -3,15 +3,16 @@ import TaskItem from '../TaskItem/TaskItem';
 
 class TaskList extends Component {
     render() {
-      const {tasks} = this.props;
+      const {tasks,handleComplete,handleDelete,handleEdit} = this.props;
       const TasksItem = tasks.map((task,index)=>{
-        return <TaskItem key={task.id} index={index} task={task}></TaskItem>
+        return <TaskItem key={task.id} index={index} task={task} handleComplete={handleComplete} handleDelete={handleDelete} handleEdit={handleEdit}></TaskItem>
       })
         return (
+          
             <table className="table table-bordered table-hover">
                 <thead>
                   <tr>
-                    <th className="text-center">STT</th>
+        <th className="text-center">STT</th>
                     <th className="text-center">Tên</th>
                     <th className="text-center">Ngày tạo</th>
                     <th className="text-center">Trạng Thái</th>
